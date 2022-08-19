@@ -1,2 +1,2 @@
 # Project1-Angular
-Flight Service Web App
+Skillstorm Project 1: Angular Portion of FlightService
