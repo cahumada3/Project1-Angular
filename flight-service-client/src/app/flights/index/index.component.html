@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Flights</h1>
+    <a href="#" routerLink="/flights/create/" class="btn btn-success">+ Add New Flight</a>
+    <a href="#" routerLink="/flights/update/" class="btn btn-success">Update A Flight</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Airline</th>
+                <th>Departure Date</th>
+                <th>Departure Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
+                <th>Boarding Time</th>
+                <th>Gate Number</th>
+                <th>Destination</th>
+                <th>Max Number Of Seats</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights">
+                <td>{{flight.id}}</td>
+                <td>{{flight.airline}}</td>
+                <td>{{flight.departureDate}}</td>
+                <td>{{flight.departureTime}}</td>
+                <td>{{flight.arrivalDate}}</td>
+                <td>{{flight.arrivalTime}}</td>
+                <td>{{flight.boardingTime}}</td>
+                <td>{{flight.gateNumber}}</td>
+                <td>{{flight.destination}}</td>
+                <td>{{flight.maxNumberOfSeats}}</td>
+                <button type="button" (click)="delete(flight.id)" class="btn btn-danger">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>

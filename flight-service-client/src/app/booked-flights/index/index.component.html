@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Booked Flights</h1>
+    <a href="#" routerLink="/booked-flights/create/" class="btn btn-success">+ Add Passenger To A Flight</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Passenger Id</th>
+                <th>Flight Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bookedFlight of bookedFlights" >
+                <td>{{bookedFlight.id}}</td>
+                <td>{{bookedFlight.passengerId}}</td>
+                <td>{{bookedFlight.flightId}}</td>
+                <a routerLink="/booked-flights/view/"><button class="btn btn-success pull-right" > View</button></a>
+                <button type="button" (click)="delete(bookedFlight.id)" class="btn btn-danger">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>
